@@ -3,15 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chitra.AI - Your Image Processing Solution</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      /* Mobile Styles (applies to all screen sizes) */
-      font-size: 16px;
+    }
+
+    /* Responsive Container */
+    .container {
+      max-width: 900px;
+      width: 100%;
+      margin: auto;
     }
 
     header {
@@ -22,7 +27,7 @@
       padding: 20px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start; /* Align items to the top */
+      align-items: flex-start;
       position: fixed;
       width: 100%;
       top: 0;
@@ -108,7 +113,6 @@
       background-color: #ddd;
     }
 
-    /* Larger font size for the main content text */
     .main-content h2 {
       font-size: 4em;
       margin-top: 30px;
@@ -140,9 +144,18 @@
       cursor: pointer;
     }
 
-    .image-container img {
-      width: 80%;
+    .image-container div {
+      margin-bottom: 10px;
+    }
+
+    /* Max-width for images and videos */
+    img,
+    video {
+      max-width: 100%;
       height: auto;
+    }
+
+    .image-container img {
       border-radius: 8px;
       margin-bottom: 10px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -188,61 +201,66 @@
       text-align: justify;
     }
 
-    /* Tablet Styles (min-width: 600px) */
-    @media (min-width: 600px) {
-      body {
-        font-size: 18px;
-      }
-
+    /* Mobile-first Design */
+    @media only screen and (max-width: 600px) {
       header {
-        padding: 25px;
+        padding: 15px;
       }
 
       .main-content {
-        padding: 150px 0 40px;
+        padding: 80px 10px 20px;
       }
 
       .get-started-button {
-        font-size: 1.5em;
+        padding: 12px 24px;
+        font-size: 1em;
+      }
+
+      .image-container {
+        flex-direction: column;
+      }
+
+      .image-container div {
+        margin-bottom: 20px;
       }
 
       .image-container img {
-        width: 60%;
+        width: 100%;
       }
-      /* Add more styles as needed for tablets */
     }
 
-    /* Desktop Styles (min-width: 1200px) */
-    @media (min-width: 1200px) {
-      body {
-        font-size: 20px;
-      }
-
-      header {
-        padding: 30px;
-      }
-
+    /* Tablet Layout */
+    @media only screen and (min-width: 768px) {
       .main-content {
-        padding: 180px 0 40px;
+        padding: 100px 20px 20px;
       }
 
-      .get-started-button {
-        font-size: 1.8em;
+      .image-container div {
+        margin-bottom: 15px;
       }
 
       .image-container img {
-        width: 50%;
+        width: 48%;
       }
-      /* Add more styles as needed for desktop */
     }
 
+    /* Desktop Layout */
+    @media only screen and (min-width: 1024px) {
+      .main-content {
+        padding: 120px 40px 40px;
+      }
+
+      .image-container img {
+        width: 30%;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <header>
-    <div>
+    <div class="container">
       <h1>Chitra.AI</h1>
       <p>Your Image Processing Solution</p>
       <nav>
@@ -265,13 +283,13 @@
     </div>
   </header>
 
-  <div class="main-content">
+  <div class="main-content container">
     <h2>Welcome to Chitra.AI</h2>
     <p>Transform your images with cutting-edge AI-powered image processing. Enhance, upscale, and manipulate your photos effortlessly.</p>
     <button class="get-started-button">Get Started</button>
   </div>
 
-  <div class="ai-tools-section">
+  <div class="ai-tools-section container">
     <h3 class="ai-tools-heading">Our AI Tools</h3>
     <p class="ai-tools-description">Explore our powerful AI tools designed to revolutionize image processing.</p>
 
@@ -311,7 +329,7 @@
   </div>
 
   <!-- Footer section -->
-  <footer>
+  <footer class="container">
     <!-- About Us Section -->
     <div class="footer-section">
       <h3>About Us</h3>
