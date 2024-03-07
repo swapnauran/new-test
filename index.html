@@ -21,10 +21,6 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start; /* Align items to the top */
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
     }
 
     h1 {
@@ -39,7 +35,7 @@
 
     .main-content {
       text-align: center;
-      padding: 120px 0 40px; /* Adjust padding to accommodate fixed header and move the text down */
+      padding: 40px;
     }
 
     .get-started-button {
@@ -78,13 +74,8 @@
     }
 
     .dropdown {
-      display: none;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .dropdown a {
-      margin: 0;
+      position: relative;
+      display: inline-block;
     }
 
     .dropdown-content {
@@ -92,7 +83,7 @@
       position: absolute;
       background-color: #f9f9f9;
       min-width: 260px; /* Updated minimum width */
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
     }
 
@@ -114,7 +105,6 @@
     /* Larger font size for the main content text */
     .main-content h2 {
       font-size: 4em; /* Updated font size */
-      margin-top: 30px; /* Adjust margin-top to move the text down */
     }
 
     /* New section styles */
@@ -159,56 +149,21 @@
       font-size: 1.2em; /* Adjust font size as needed */
     }
 
-    /* Footer styles */
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: left;
-      padding: 20px;
-      height: 600px; /* Set your desired height */
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+    @media only screen and (max-width: 768px) {
+      /* Styles for smaller screens (768 pixels or less) */
+      header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center;
+      }
 
-    /* Footer Section Styles */
-    .footer-section {
-      flex: 1;
-      margin-right: 20px;
-    }
-
-    /* Styles for social media icons */
-    .social-media-icons {
-      list-style: none;
-      padding: 0;
-      display: flex;
-    }
-
-    .social-media-icons li {
-      margin-right: 10px; /* Adjust margin between icons as needed */
-    }
-
-    .social-media-icons img {
-      width: 30px; /* Adjust the size of the icons as needed */
-      height: 30px;
-    }
-
-    /* Footer paragraph style */
-    .footer-section p {
-      text-align: justify;
-    }
-
-    @media screen and (max-width: 421px) {
       nav {
-        display: none;
+        order: 2; /* Move the nav below the logo and description */
       }
 
-      .dropdown {
-        display: flex;
-      }
-
-      .dropdown a {
-        display: none;
+      .login-signup {
+        order: 1; /* Move the login/signup above the logo and description */
+        margin-top: 10px; /* Add some space between login/signup and the header */
       }
     }
   </style>
@@ -220,16 +175,7 @@
     <div>
       <h1>Chitra.AI</h1>
       <p>Your Image Processing Solution</p>
-      <div class="dropdown" onclick="toggleNav()">
-        <span>&#9776;</span>
-        <div class="dropdown-content" id="navDropdown">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#tools">Tools</a>
-          <a href="#price">Price</a>
-        </div>
-      </div>
-      <nav id="navMenu">
+      <nav>
         <a href="#home">Home</a>
         <div class="dropdown">
           <a href="#services">Services</a>
@@ -293,61 +239,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Footer section -->
-  <footer>
-    <!-- About Us Section -->
-    <div class="footer-section">
-      <h3>About Us</h3>
-      <p>
-        Founded in 2024, with a group of technomaniacs, Chitra.AI leverages the power of artificial intelligence and computer vision to deliver a wide range of products that make your life much easier and your work more productive.
-      </p>
-    </div>
-
-    <!-- Contact Us Section -->
-    <div class="footer-section contact-us">
-      <h3>Contact Us</h3>
-      <p>
-        Email: info@chitra.ai<br>
-        Phone: +1 (123) 456-7890
-      </p>
-    </div>
-
-    <!-- Policy Section -->
-    <div class="footer-section">
-      <h3>Policy</h3>
-      <p>
-        <a href="terms-of-service.html" target="_blank">Terms of Service</a><br>
-        <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
-      </p>
-    </div>
-
-    <!-- Why Choose Our Tools Section -->
-    <div class="footer-section">
-      <h3>Why Choose Our Tools</h3>
-      <p>
-        Celebrate efficiency with Chitra.AI – your gateway to seamless image processing. Elevate your creative projects with our cutting-edge tools designed for unparalleled precision and speed.
-      </p>
-    </div>
-
-    <!-- Social Media Section -->
-    <div class="footer-section social-media">
-      <h3>Follow Us on Social Media</h3>
-      <ul class="social-media-icons">
-        <!-- Replace these links with your actual social media links -->
-        <li><a href="#" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a></li>
-        <li><a href="#" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a></li>
-        <li><a href="#" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <script>
-    function toggleNav() {
-      var navDropdown = document.getElementById('navDropdown');
-      navDropdown.classList.toggle('show');
-    }
-  </script>
 
 </body>
 
