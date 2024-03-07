@@ -20,7 +20,7 @@
       padding: 20px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: flex-start; /* Align items to the top */
       position: fixed;
       width: 100%;
       top: 0;
@@ -34,51 +34,12 @@
 
     p {
       font-size: 1.2em;
-      margin-bottom: 10px;
-    }
-
-    .login-signup {
-      background-color: white;
-      color: #3498db;
-      padding: 10px 20px;
-      font-size: 1.2em;
-      border: 2px solid #3498db;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      margin-right: 15px;
-      margin-bottom: 10px;
-      font-size: 1.2em;
-      cursor: pointer;
-      position: relative;
-      display: block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 100%;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
+      margin-bottom: 10px; /* Adjust margin as needed */
     }
 
     .main-content {
       text-align: center;
-      padding: 120px 0 40px;
+      padding: 120px 0 40px; /* Adjust padding to accommodate fixed header and move the text down */
     }
 
     .get-started-button {
@@ -92,58 +53,131 @@
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     }
 
+    .login-signup {
+      background-color: white;
+      color: #3498db;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border: 2px solid #3498db;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    nav {
+      margin-top: 10px; /* Adjust margin as needed */
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-right: 15px; /* Adjust margin as needed */
+      margin-bottom: 10px; /* Adjust margin as needed */
+      font-size: 1.2em;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .dropdown {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .dropdown a {
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 260px; /* Updated minimum width */
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Larger font size for the main content text */
+    .main-content h2 {
+      font-size: 4em; /* Updated font size */
+      margin-top: 30px; /* Adjust margin-top to move the text down */
+    }
+
+    /* New section styles */
     .ai-tools-section {
       text-align: center;
       margin: 40px 0;
     }
 
+    .ai-tools-heading {
+      font-size: 3em; /* Larger font size for the heading */
+    }
+
+    .ai-tools-description {
+      font-size: 1.5em; /* Larger font size for the description */
+      margin-top: 20px; /* Adjust margin as needed */
+    }
+
+    /* Styles for Image Container */
     .image-container {
       display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
+      justify-content: space-between; /* Adjust as needed */
+      margin-top: 20px; /* Adjust margin as needed */
     }
 
-    .image-container div {
-      margin-bottom: 20px;
-    }
-
+    /* Styles for Individual Images */
     .image-container a {
       text-decoration: none;
-      color: inherit;
+      color: inherit; /* Inherit color from parent */
       cursor: pointer;
     }
 
     .image-container img {
-      width: 80%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
+      width: 80%; /* Make the image slightly smaller */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 8px; /* Add border radius for rounded corners */
+      margin-bottom: 10px; /* Adjust margin as needed */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+      cursor: pointer; /* Add cursor style */
     }
 
     .tool-name {
-      font-size: 1.2em;
+      font-size: 1.2em; /* Adjust font size as needed */
     }
 
+    /* Footer styles */
     footer {
       background-color: #333;
       color: white;
       text-align: left;
       padding: 20px;
-      height: auto;
+      height: 600px; /* Set your desired height */
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-top: 20px;
     }
 
+    /* Footer Section Styles */
     .footer-section {
       flex: 1;
       margin-right: 20px;
-      margin-bottom: 20px;
     }
 
+    /* Styles for social media icons */
     .social-media-icons {
       list-style: none;
       padding: 0;
@@ -151,54 +185,30 @@
     }
 
     .social-media-icons li {
-      margin-right: 10px;
+      margin-right: 10px; /* Adjust margin between icons as needed */
     }
 
     .social-media-icons img {
-      width: 30px;
+      width: 30px; /* Adjust the size of the icons as needed */
       height: 30px;
     }
 
+    /* Footer paragraph style */
     .footer-section p {
       text-align: justify;
     }
 
-    /* Responsive Navigation Styles */
-    @media screen and (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
+    @media screen and (max-width: 421px) {
       nav {
-        margin-top: 10px;
+        display: none;
       }
 
-      nav a {
-        display: block;
-        margin: 10px 0;
+      .dropdown {
+        display: flex;
       }
 
-      .login-signup {
-        margin-top: 10px;
-      }
-
-      .dropdown-content {
-        min-width: 100%;
-      }
-
-      .image-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .image-container div {
-        margin-bottom: 20px;
-      }
-
-      .footer-section {
-        margin-bottom: 20px;
+      .dropdown a {
+        display: none;
       }
     }
   </style>
@@ -210,24 +220,33 @@
     <div>
       <h1>Chitra.AI</h1>
       <p>Your Image Processing Solution</p>
+      <div class="dropdown" onclick="toggleNav()">
+        <span>&#9776;</span>
+        <div class="dropdown-content" id="navDropdown">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#tools">Tools</a>
+          <a href="#price">Price</a>
+        </div>
+      </div>
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <div class="dropdown">
+          <a href="#services">Services</a>
+          <div class="dropdown-content">
+            <a href="#">AI Image Upscaling</a>
+            <a href="#">AI Background Remove</a>
+            <a href="#">Remove Unwanted Object</a>
+            <a href="#">Image Lip-Sync</a>
+          </div>
+        </div>
+        <a href="#tools">Tools</a>
+        <a href="#price">Price</a>
+      </nav>
     </div>
     <div class="login-signup">
       Login/Sign Up
     </div>
-    <nav>
-      <a href="#home">Home</a>
-      <div class="dropdown">
-        <a href="#services">Services</a>
-        <div class="dropdown-content">
-          <a href="#">AI Image Upscaling</a>
-          <a href="#">AI Background Remove</a>
-          <a href="#">Remove Unwanted Object</a>
-          <a href="#">Image Lip-Sync</a>
-        </div>
-      </div>
-      <a href="#tools">Tools</a>
-      <a href="#price">Price</a>
-    </nav>
   </header>
 
   <div class="main-content">
@@ -322,6 +341,13 @@
       </ul>
     </div>
   </footer>
+
+  <script>
+    function toggleNav() {
+      var navDropdown = document.getElementById('navDropdown');
+      navDropdown.classList.toggle('show');
+    }
+  </script>
 
 </body>
 
