@@ -3,20 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chitra.AI - Your Image Processing Solution</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-    }
-
-    /* Responsive Container */
-    .container {
-      max-width: 900px;
-      width: 100%;
-      margin: auto;
     }
 
     header {
@@ -44,6 +37,45 @@
       margin-bottom: 10px;
     }
 
+    .login-signup {
+      background-color: white;
+      color: #3498db;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border: 2px solid #3498db;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-right: 15px;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      position: relative;
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
     .main-content {
       text-align: center;
       padding: 120px 0 40px;
@@ -60,76 +92,9 @@
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     }
 
-    .login-signup {
-      background-color: white;
-      color: #3498db;
-      padding: 10px 20px;
-      font-size: 1.2em;
-      border: 2px solid #3498db;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      margin-right: 15px;
-      margin-bottom: 10px;
-      font-size: 1.2em;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 260px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
-      color: #333;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-
-    .main-content h2 {
-      font-size: 4em;
-      margin-top: 30px;
-    }
-
     .ai-tools-section {
       text-align: center;
       margin: 40px 0;
-    }
-
-    .ai-tools-heading {
-      font-size: 3em;
-    }
-
-    .ai-tools-description {
-      font-size: 1.5em;
-      margin-top: 20px;
     }
 
     .image-container {
@@ -138,24 +103,19 @@
       margin-top: 20px;
     }
 
+    .image-container div {
+      margin-bottom: 20px;
+    }
+
     .image-container a {
       text-decoration: none;
       color: inherit;
       cursor: pointer;
     }
 
-    .image-container div {
-      margin-bottom: 10px;
-    }
-
-    /* Max-width for images and videos */
-    img,
-    video {
-      max-width: 100%;
-      height: auto;
-    }
-
     .image-container img {
+      width: 80%;
+      height: auto;
       border-radius: 8px;
       margin-bottom: 10px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -171,15 +131,17 @@
       color: white;
       text-align: left;
       padding: 20px;
-      height: 600px;
+      height: auto;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-top: 20px;
     }
 
     .footer-section {
       flex: 1;
       margin-right: 20px;
+      margin-bottom: 20px;
     }
 
     .social-media-icons {
@@ -201,57 +163,42 @@
       text-align: justify;
     }
 
-    /* Mobile-first Design */
-    @media only screen and (max-width: 600px) {
+    /* Responsive Navigation Styles */
+    @media screen and (max-width: 768px) {
       header {
-        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
 
-      .main-content {
-        padding: 80px 10px 20px;
+      nav {
+        margin-top: 10px;
       }
 
-      .get-started-button {
-        padding: 12px 24px;
-        font-size: 1em;
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .login-signup {
+        margin-top: 10px;
+      }
+
+      .dropdown-content {
+        min-width: 100%;
       }
 
       .image-container {
         flex-direction: column;
+        align-items: center;
       }
 
       .image-container div {
         margin-bottom: 20px;
       }
 
-      .image-container img {
-        width: 100%;
-      }
-    }
-
-    /* Tablet Layout */
-    @media only screen and (min-width: 768px) {
-      .main-content {
-        padding: 100px 20px 20px;
-      }
-
-      .image-container div {
-        margin-bottom: 15px;
-      }
-
-      .image-container img {
-        width: 48%;
-      }
-    }
-
-    /* Desktop Layout */
-    @media only screen and (min-width: 1024px) {
-      .main-content {
-        padding: 120px 40px 40px;
-      }
-
-      .image-container img {
-        width: 30%;
+      .footer-section {
+        margin-bottom: 20px;
       }
     }
   </style>
@@ -260,36 +207,36 @@
 <body>
 
   <header>
-    <div class="container">
+    <div>
       <h1>Chitra.AI</h1>
       <p>Your Image Processing Solution</p>
-      <nav>
-        <a href="#home">Home</a>
-        <div class="dropdown">
-          <a href="#services">Services</a>
-          <div class="dropdown-content">
-            <a href="#">AI Image Upscaling</a>
-            <a href="#">AI Background Remove</a>
-            <a href="#">Remove Unwanted Object</a>
-            <a href="#">Image Lip-Sync</a>
-          </div>
-        </div>
-        <a href="#tools">Tools</a>
-        <a href="#price">Price</a>
-      </nav>
     </div>
     <div class="login-signup">
       Login/Sign Up
     </div>
+    <nav>
+      <a href="#home">Home</a>
+      <div class="dropdown">
+        <a href="#services">Services</a>
+        <div class="dropdown-content">
+          <a href="#">AI Image Upscaling</a>
+          <a href="#">AI Background Remove</a>
+          <a href="#">Remove Unwanted Object</a>
+          <a href="#">Image Lip-Sync</a>
+        </div>
+      </div>
+      <a href="#tools">Tools</a>
+      <a href="#price">Price</a>
+    </nav>
   </header>
 
-  <div class="main-content container">
+  <div class="main-content">
     <h2>Welcome to Chitra.AI</h2>
     <p>Transform your images with cutting-edge AI-powered image processing. Enhance, upscale, and manipulate your photos effortlessly.</p>
     <button class="get-started-button">Get Started</button>
   </div>
 
-  <div class="ai-tools-section container">
+  <div class="ai-tools-section">
     <h3 class="ai-tools-heading">Our AI Tools</h3>
     <p class="ai-tools-description">Explore our powerful AI tools designed to revolutionize image processing.</p>
 
@@ -329,7 +276,7 @@
   </div>
 
   <!-- Footer section -->
-  <footer class="container">
+  <footer>
     <!-- About Us Section -->
     <div class="footer-section">
       <h3>About Us</h3>
