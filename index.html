@@ -10,6 +10,8 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
+      /* Mobile Styles (applies to all screen sizes) */
+      font-size: 16px;
     }
 
     header {
@@ -34,12 +36,12 @@
 
     p {
       font-size: 1.2em;
-      margin-bottom: 10px; /* Adjust margin as needed */
+      margin-bottom: 10px;
     }
 
     .main-content {
       text-align: center;
-      padding: 120px 0 40px; /* Adjust padding to accommodate fixed header and move the text down */
+      padding: 120px 0 40px;
     }
 
     .get-started-button {
@@ -64,14 +66,14 @@
     }
 
     nav {
-      margin-top: 10px; /* Adjust margin as needed */
+      margin-top: 10px;
     }
 
     nav a {
       text-decoration: none;
       color: #333;
-      margin-right: 15px; /* Adjust margin as needed */
-      margin-bottom: 10px; /* Adjust margin as needed */
+      margin-right: 15px;
+      margin-bottom: 10px;
       font-size: 1.2em;
       cursor: pointer;
       position: relative;
@@ -86,7 +88,7 @@
       display: none;
       position: absolute;
       background-color: #f9f9f9;
-      min-width: 260px; /* Updated minimum width */
+      min-width: 260px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
@@ -108,71 +110,65 @@
 
     /* Larger font size for the main content text */
     .main-content h2 {
-      font-size: 4em; /* Updated font size */
-      margin-top: 30px; /* Adjust margin-top to move the text down */
+      font-size: 4em;
+      margin-top: 30px;
     }
 
-    /* New section styles */
     .ai-tools-section {
       text-align: center;
       margin: 40px 0;
     }
 
     .ai-tools-heading {
-      font-size: 3em; /* Larger font size for the heading */
+      font-size: 3em;
     }
 
     .ai-tools-description {
-      font-size: 1.5em; /* Larger font size for the description */
-      margin-top: 20px; /* Adjust margin as needed */
+      font-size: 1.5em;
+      margin-top: 20px;
     }
 
-    /* Styles for Image Container */
     .image-container {
       display: flex;
-      justify-content: space-between; /* Adjust as needed */
-      margin-top: 20px; /* Adjust margin as needed */
+      justify-content: space-between;
+      margin-top: 20px;
     }
 
-    /* Styles for Individual Images */
     .image-container a {
       text-decoration: none;
-      color: inherit; /* Inherit color from parent */
+      color: inherit;
       cursor: pointer;
     }
 
     .image-container img {
-      width: 80%; /* Make the image slightly smaller */
-      height: auto; /* Maintain aspect ratio */
-      border-radius: 8px; /* Add border radius for rounded corners */
-      margin-bottom: 10px; /* Adjust margin as needed */
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
-      cursor: pointer; /* Add cursor style */
+      width: 80%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
     }
 
     .tool-name {
-      font-size: 1.2em; /* Adjust font size as needed */
+      font-size: 1.2em;
     }
 
-    /* Footer styles */
     footer {
       background-color: #333;
       color: white;
       text-align: left;
       padding: 20px;
-      height: 600px; /* Set your desired height */
+      height: 600px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
 
-    /* Footer Section Styles */
     .footer-section {
       flex: 1;
       margin-right: 20px;
     }
 
-    /* Styles for social media icons */
     .social-media-icons {
       list-style: none;
       padding: 0;
@@ -180,18 +176,66 @@
     }
 
     .social-media-icons li {
-      margin-right: 10px; /* Adjust margin between icons as needed */
+      margin-right: 10px;
     }
 
     .social-media-icons img {
-      width: 30px; /* Adjust the size of the icons as needed */
+      width: 30px;
       height: 30px;
     }
 
-    /* Footer paragraph style */
     .footer-section p {
       text-align: justify;
     }
+
+    /* Tablet Styles (min-width: 600px) */
+    @media (min-width: 600px) {
+      body {
+        font-size: 18px;
+      }
+
+      header {
+        padding: 25px;
+      }
+
+      .main-content {
+        padding: 150px 0 40px;
+      }
+
+      .get-started-button {
+        font-size: 1.5em;
+      }
+
+      .image-container img {
+        width: 60%;
+      }
+      /* Add more styles as needed for tablets */
+    }
+
+    /* Desktop Styles (min-width: 1200px) */
+    @media (min-width: 1200px) {
+      body {
+        font-size: 20px;
+      }
+
+      header {
+        padding: 30px;
+      }
+
+      .main-content {
+        padding: 180px 0 40px;
+      }
+
+      .get-started-button {
+        font-size: 1.8em;
+      }
+
+      .image-container img {
+        width: 50%;
+      }
+      /* Add more styles as needed for desktop */
+    }
+
   </style>
 </head>
 
@@ -287,13 +331,12 @@
 
     <!-- Policy Section -->
     <div class="footer-section">
-  <h3>Policy</h3>
-  <p>
-    <a href="terms-of-service.html" target="_blank">Terms of Service</a><br>
-    <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
-  </p>
-</div>
-
+      <h3>Policy</h3>
+      <p>
+        <a href="terms-of-service.html" target="_blank">Terms of Service</a><br>
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+      </p>
+    </div>
 
     <!-- Why Choose Our Tools Section -->
     <div class="footer-section">
